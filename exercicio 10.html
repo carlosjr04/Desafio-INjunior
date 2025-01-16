@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        sair = false
+        let listaespera = []
+        do{
+            
+            for(i=0;i<listaespera.length;i++){
+            console.log(`${i}° ${listaespera[i]}`)
+            }
+            console.log(`-------------------------`)
+            tarefa = prompt("Você deseja: Adicionar novo cliente:“Novo Cliente”:, atender um clinte:“Atender Cliente”: ou Sair do sistema:”sair”")
+            tarefa = tarefa.toLowerCase()
+            if (tarefa === "novo cliente"){
+                nome = prompt("Digite nome do cliente")
+                listaespera.push(nome)
+            }
+            if (tarefa === "atender cliente"){
+                if (listaespera.length == 0){
+                    console.log("não há ninguem para atender")
+                }else{
+                    let atendido = listaespera.shift()
+                }
+                
+            }
+            if (tarefa === "sair"){
+                sair=true
+            }
+        }while(!(sair))
+        
+
+    </script>
+</body>
+</html>

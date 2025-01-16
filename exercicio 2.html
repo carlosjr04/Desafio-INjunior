@@ -1,0 +1,44 @@
+<!DOCTYPE html>exercicio 2
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let sair = false
+    do{
+        let fatorial = 1
+        a = prompt("Insira valor inteiro para descobrir seu fatorial")
+        a = Number(a)
+        
+        
+        if (isNaN(a) || a <= 0 || !Number.isInteger(a)) {
+            console.log("Você deve digitar um número inteiro positivo.")
+            continue;
+        }
+            
+        
+        for(i=1;i<=a;i++){
+            fatorial=i*fatorial
+        }
+        console.log(`fatorial de ${a} é ${fatorial}`)
+        let resposta=false
+        while(!resposta){
+            let b = prompt("Voce deseja inserir outro número?S/N")
+            if (b=='S' || b=='s'){
+                
+                resposta=true
+            }
+            if (b=='N' || b=='n'){
+                sair= true
+                resposta=true
+            }else{
+                console.log("Deve ser S ou N")
+            }
+        }
+    }while (sair==false)
+    </script>
+</body>
+</html>

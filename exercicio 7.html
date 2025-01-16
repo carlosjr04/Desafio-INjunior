@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        frase = prompt("Digite uma frase")
+        frase.toLowerCase()
+        let caracteres = frase.split("")
+        
+        for(i=0;i<caracteres.length;i++){
+            if (caracteres[i] == " "){
+                caracteres.splice(i,1)
+            }
+            
+        }
+        let contador = 0
+
+        for(i=0;i<caracteres.length;i++){
+            if (caracteres[i] == caracteres[caracteres.length-i-1]){            
+                contador++
+            }else{
+                console.log("Esta frase não é um palindrome")
+                break
+            }
+            
+        }
+        if(contador==caracteres.length){
+            console.log("Esta frase é um palindrome")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = prompt("Digite um número")
+        a = Number(a)
+
+        if(a%3==0){
+            if (a%5==0){
+                console.log("fizzbuzz")
+            }
+            if (!((a%5==0))){
+                console.log("fizz")
+            }
+        }
+        if (a%5==0 && !(a%3==0)){
+            console.log("buzz")
+        }
+    </script>
+</body>
+</html>

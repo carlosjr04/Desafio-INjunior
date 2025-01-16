@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function encontrarElementoUnico(listaint){
+            let listanum = []
+            for(i=0;i<listaint.length;i++){
+                let existe = listanum.includes(listaint[i])
+                let numero = listaint[i]
+                if (!(existe)){
+                    listanum.push(numero)
+                    
+                }
+                if (existe){
+                    for(j=0;j<listanum.length;j++){
+                        if(listanum[j]===numero){
+                            listanum.splice(j, 1);
+                        }
+                    }
+                }
+
+            }
+        return listanum
+        }
+        let listanumeros = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,8]
+        
+        console.log(`O unico elemento que não se repete é: ${encontrarElementoUnico(listanumeros)[0]}`)
+        
+        
+    </script>
+</body>
+</html>

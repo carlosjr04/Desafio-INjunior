@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Time = []
+        function adicionarJogador(nomej,idadej,posiçãoj,pontuaçãoj){
+            let jogador = {
+                nome: nomej,
+                idade: idadej,
+                posição:posiçãoj,
+                pontuação: pontuaçãoj
+            }
+            Time.push(jogador)
+        }
+        function buscarPorPosicao(posicaoj){
+            listaposicao=[]
+            for(i = 0; i<Time.length;i++){
+                if(Time[i].posição===posicaoj){
+                    listaposicao.push(Time[i])
+                }
+            }
+            
+            if (listaposicao.length === 0){
+                console.log("Não possui nenhum jogador nessa posição")
+                return listaposicao
+            }else{
+                return listaposicao
+            }
+            
+        }
+        function listarTime(){
+            
+            for(i = 0; i<Time.length;i++){
+                console.log(`Jogador ${i}:${Time[i].nome}`)
+            }
+        }
+        function calcularPontuacaoMedia(){
+            let media= 0
+            
+            for(i = 0; i<Time.length;i++){
+                media+= Time[i].pontuação
+            }
+            media = media/ Time.length
+            return media
+        }
+
+
+        
+        
+        let sair = false
+        do{
+            comando= prompt("Você deseja:\n1 - Adicionar jogador \n2 - Buscar por posição \n3 - Listar time \n4 - Calcular pontuação média \n5 - Sair")
+            comando = Number(comando)
+
+            switch(comando){
+                case 1:
+                nome = prompt("Digite nome do jogador")
+                idade = prompt("Digite idade do jogador")
+                idade = Number(idade)
+                posicao = prompt("Digite posição do jogador")
+                pontuacao = prompt("Digite pontuação do jogador")
+                pontuacao = Number(pontuacao)
+                adicionarJogador(nome,idade,posicao,pontuacao)
+                break
+
+                case 2:
+                    posicao = prompt("Digite a posição que queira buscar")
+                    let listaposicao = buscarPorPosicao(posicao)
+                    console.log(`${posicao}:`)
+                    for(i=0;i<listaposicao.length;i++){
+                        console.log(listaposicao[i].nome)
+                    }  
+                    break
+
+                case 3:
+                    listarTime()
+                    break
+
+                case 4:
+                    let media = calcularPontuacaoMedia()
+                    console.log(`A média do time é de ${media} pontos`)
+                    break
+
+                case 5:
+                sair=true
+                break
+
+                default:
+                    console.log("Comando inválido");
+            }
+            
+        }while(sair===false)
+    </script>
+</body>
+</html>
