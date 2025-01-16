@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        valor = prompt("Digite o valor em R$")
+        valor = parseFloat(valor)
+
+        let euro = 6.10
+        let dolar = 5.70
+
+        let valoreuro = valor/euro
+        let valordolar = valor/dolar
+
+        console.log(`O valor inserido é R$${valor.toFixed(2)}`)
+        console.log(`O valor em euro é €${valoreuro.toFixed(2)}`)
+        console.log(`O valor em dolar é $${valordolar.toFixed(2)}`)
+    </script>
+</body>
+</html>

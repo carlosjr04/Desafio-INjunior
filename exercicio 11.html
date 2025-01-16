@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function numerosseq(lista){
+            let count = 1
+            let maior = 0
+            for( i=0;i<lista.length;i++){
+                
+                    if ((lista[i+1]>lista[i])){
+                        count+=1
+                    }else{
+                        if(count>maior){
+                            maior = count
+                        }
+                        count = 1
+                    }
+                
+            }
+            if (count > maior) {
+            maior = count;
+            }
+            return maior
+        }
+        numeros = prompt("Quantos Números serão adicionados?")
+        numero = Number(numeros)
+        listanum = []
+        for (i=0;i<numeros;i++){
+            a = prompt("Digite o número")
+            listanum.push(Number(a))
+        }
+        
+        let maiorseq = numerosseq(listanum)
+        console.log(`Maior sequencia é de ${maiorseq} numeros`)
+
+    </script>
+</body>
+</html>

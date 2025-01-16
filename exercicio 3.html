@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificarIdades(anonascimento){
+            ano = prompt("Em que ano estamos?")
+            ano = Number(ano)
+            let idades=[]
+            let maioridade= []
+            for(i=0;i<anonascimento.length;i++){
+                idades[i]=ano-anonascimento[i]
+                if(ano-anonascimento[i]>=18){
+                    maioridade.push("Maior de idade")
+                }else{
+                    maioridade.push("Menor de idade")
+                }
+            }
+            return maioridade
+        }
+        let anos = [2015,2007,2020,2002,2004,1996]
+        let maioridade = verificarIdades(anos)
+
+        for (i=0;i<maioridade.length;i++){
+            console.log(`Pessoa ${i} : ${maioridade[i]}`)
+        }
+    </script>
+</body>
+</html>

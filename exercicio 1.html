@@ -1,0 +1,29 @@
+<!DOCTYPE html>!Exercio 1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    a = prompt("Insira valor de 'a'")
+    b = prompt("Insira valor de 'b'")
+    c = prompt("Insira valor de 'c'")
+
+    delta = b**2 - (4*a*c);
+    if (delta<0){
+        console.log("Não existe raízes reais");
+    }
+    if (delta==0){
+        raiz = -b/2*a;
+        console.log(`A raiz dessa equação é x1= ${raiz}`)
+    }
+    if (delta>0){
+        raiz1 = (-b + Math.sqrt(delta))/2*a;
+        raiz2 = (-b - Math.sqrt(delta))/2*a;
+        console.log(`As raízes dessa equação é: x1= ${raiz1} e x2= ${raiz2}`);
+    }
+    </script>
+</body>
+</html>

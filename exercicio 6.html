@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Fibonacci(numero){
+            if (numero==0){
+                return [0]
+            }
+            if (numero==1){
+                return [0,1]
+            }
+            let fib= Fibonacci(numero-1)
+            let prox = fib[fib.length-2] + fib[fib.length-1]
+            fib.push(prox)
+            return fib
+        }
+        a= prompt("Digite um número para Fibonacci")
+        a = Number(a)
+        let fibo = Fibonacci(a)
+        for(i=0;i<fibo.length;i++){
+            console.log(fibo[i])
+        }
+
+    </script>
+</body>
+</html>
